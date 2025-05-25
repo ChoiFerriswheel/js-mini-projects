@@ -5,16 +5,15 @@
 
 ## 프로젝트 목록
 
-| 프로젝트         | 설명                  | 링크                                                         |
-|----------------|---------------------|------------------------------------------------------------|
-- | 🕒 Digital Clock | 실시간 디지털 시계      | [바로가기](./digital-clock/index.html)                     |
-+ | 🕒 Digital Clock | 실시간 디지털 시계      | [바로가기](https://choiferriswheel.github.io/js-mini-projects/digital-clock/index.html)  |
-- | ➗ Calculator   | 기본 사칙연산 계산기    | [바로가기](./calculator/index.html)                        |
-+ | ➗ Calculator   | 기본 사칙연산 계산기    | [바로가기](https://choiferriswheel.github.io/js-mini-projects/calculator/index.html)      |
-- | 📝 To-Do List  | 할 일 추가/삭제 기능    | *(추가 예정)*                                              |
-+ | 📝 To-Do List  | 할 일 추가/삭제 기능    | [바로가기](https://choiferriswheel.github.io/js-mini-projects/todo-list/index.html)        |                                             |
+- 🕒 **[Digital Clock](https://choiferriswheel.github.io/js-mini-projects/digital-clock/index.html)**  
+  실시간 디지털 시계
 
----
+- ➗ **[Calculator](https://choiferriswheel.github.io/js-mini-projects/calculator/index.html)**  
+  기본 사칙연산 계산기
+
+- 📝 **[To-Do List](https://choiferriswheel.github.io/js-mini-projects/todo-list/index.html)**  
+  할 일 추가/삭제 웹 앱
+
 
 ## 사용 방법
 
