@@ -9,48 +9,89 @@ body {
 .todo-container {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-  padding: 34px 32px 24px 32px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.13);
+  padding: 32px 28px 24px 28px;
   min-width: 350px;
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
 }
 h1 {
   text-align: center;
   color: #007aff;
   font-size: 2rem;
   margin-bottom: 16px;
+  letter-spacing: 2px;
 }
 .input-area {
   display: flex;
   gap: 8px;
   margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 #todo-input {
-  flex: 1;
+  flex: 2 1 140px;
   padding: 11px;
   border: 1px solid #bbb;
   border-radius: 6px;
   font-size: 1rem;
+  outline: none;
+  transition: border 0.15s;
 }
-#add-btn, #clear-btn {
-  padding: 10px 12px;
+#todo-input:focus {
+  border-color: #007aff;
+}
+#priority {
+  flex: 1 1 85px;
+  padding: 9px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7fafc;
+  outline: none;
+}
+#due {
+  flex: 1 1 115px;
+  padding: 9px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7fafc;
+  outline: none;
+}
+#add-btn {
+  flex: 0 1 70px;
+  padding: 10px 0;
   border: none;
   background: #007aff;
   color: #fff;
   border-radius: 6px;
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.12s;
+  transition: background 0.13s;
 }
-#add-btn:active, #clear-btn:active {
+#add-btn:active {
   background: #005dc1;
 }
 #clear-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
   background: #ff5f5f;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background 0.13s;
+}
+#clear-btn:active {
+  background: #d73030;
 }
 .status-area {
-  margin-bottom: 10px;
+  margin: 12px 0 10px 0;
   text-align: right;
   color: #888;
   font-size: 1rem;
@@ -67,9 +108,10 @@ h1 {
   background: #f0f6ff;
   border-radius: 6px;
   padding: 12px 14px;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
   font-size: 1.1rem;
   transition: background 0.15s;
+  word-break: break-all;
 }
 .todo-item.done {
   text-decoration: line-through;
@@ -80,18 +122,25 @@ h1 {
   font-size: 1.1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 2px 7px;
+  padding: 3px 7px;
+  width: 92%;
+  margin-right: 5px;
+}
+.todo-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .todo-actions button {
   background: #ffb84d;
   color: #222;
   border: none;
   border-radius: 4px;
-  padding: 6px 10px;
+  padding: 6px 11px;
   font-size: 0.97rem;
-  margin-left: 5px;
+  margin-left: 2px;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background 0.13s;
 }
 .todo-actions button.delete {
   background: #ff5f5f;
@@ -103,10 +152,36 @@ h1 {
 .todo-actions button.delete:active {
   background: #d73030;
 }
-@media (max-width: 480px) {
+
+/* 우선순위 컬러 강조(선택적으로) */
+.todo-item span:after {
+  content: "";
+  display: inline-block;
+  margin-left: 6px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+}
+.todo-item span:after {
+  background: #bdbdbd;
+}
+.todo-item span:after {
+  /* 이 영역은 JS에서 필요하면 클래스 추가해서 색 바꿀 수 있음 */
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
   .todo-container {
     min-width: unset;
-    max-width: 97vw;
-    padding: 16px;
+    max-width: 99vw;
+    padding: 12px;
   }
+  h1 { font-size: 1.4rem; }
+  .input-area, #todo-list, .status-area {
+    font-size: 0.98rem;
+  }
+  .todo-item { padding: 8px 6px; font-size: 1rem; }
+  #add-btn, #clear-btn { padding: 9px 0; font-size: 0.99rem; }
+  #priority, #due { padding: 8px; font-size: 0.97rem; }
 }
