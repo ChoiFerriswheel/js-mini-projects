@@ -11,7 +11,7 @@
 - ➗ **[Calculator](https://choiferriswheel.github.io/js-mini-projects/calculator/index.html)**  
   기본 사칙연산 계산기
 
-- 📝 **[To-Do List](https://choiferriswheel.github.io/js-mini-projects/To-do-list-list/index.html)**  
+- 📝 **[To-Do List](https://choiferriswheel.github.io/js-mini-projects/todo-list/index.html)**  
   할 일 추가/삭제 웹 앱
 
 
