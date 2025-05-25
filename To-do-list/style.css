@@ -10,8 +10,10 @@ body {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-  padding: 32px 28px 24px 28px;
-  min-width: 340px;
+  padding: 34px 32px 24px 32px;
+  min-width: 350px;
+  width: 100%;
+  max-width: 420px;
 }
 h1 {
   text-align: center;
@@ -22,26 +24,36 @@ h1 {
 .input-area {
   display: flex;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 #todo-input {
   flex: 1;
-  padding: 10px;
+  padding: 11px;
   border: 1px solid #bbb;
   border-radius: 6px;
   font-size: 1rem;
 }
-#add-btn {
-  padding: 10px 18px;
+#add-btn, #clear-btn {
+  padding: 10px 12px;
   border: none;
   background: #007aff;
   color: #fff;
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background 0.12s;
 }
-#add-btn:active {
+#add-btn:active, #clear-btn:active {
   background: #005dc1;
+}
+#clear-btn {
+  background: #ff5f5f;
+}
+.status-area {
+  margin-bottom: 10px;
+  text-align: right;
+  color: #888;
+  font-size: 1rem;
 }
 #todo-list {
   list-style: none;
@@ -50,29 +62,51 @@ h1 {
 }
 .todo-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background: #f0f6ff;
   border-radius: 6px;
-  padding: 10px 14px;
-  margin-bottom: 8px;
+  padding: 12px 14px;
+  margin-bottom: 9px;
   font-size: 1.1rem;
+  transition: background 0.15s;
 }
 .todo-item.done {
   text-decoration: line-through;
   color: #aaa;
   background: #e4e6e7;
 }
-.delete-btn {
-  background: #ff5f5f;
-  border: none;
-  color: #fff;
-  padding: 6px 12px;
+.todo-item input[type="text"] {
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  margin-left: 8px;
+  padding: 2px 7px;
 }
-.delete-btn:active {
+.todo-actions button {
+  background: #ffb84d;
+  color: #222;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 0.97rem;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.todo-actions button.delete {
+  background: #ff5f5f;
+  color: #fff;
+}
+.todo-actions button:active {
+  background: #d2b57c;
+}
+.todo-actions button.delete:active {
   background: #d73030;
+}
+@media (max-width: 480px) {
+  .todo-container {
+    min-width: unset;
+    max-width: 97vw;
+    padding: 16px;
+  }
 }
