@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f2f5;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#display {
+  width: 100%;
+  height: 2rem;
+  font-size: 1.5rem;
+  text-align: right;
+  margin-bottom: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.buttons button {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.2rem;
+  font-size: 1.2rem;
+}
+
+button.clear {
+  background: #e74c3c;
+  color: white;
+}
