@@ -10,9 +10,15 @@
     <h1>To-Do List</h1>
     <div class="input-area">
       <input type="text" id="todo-input" placeholder="할 일을 입력하세요" autocomplete="off" />
+      <select id="priority">
+        <option value="1">낮음</option>
+        <option value="2" selected>보통</option>
+        <option value="3">높음</option>
+      </select>
+      <input type="date" id="due" />
       <button id="add-btn">추가</button>
-      <button id="clear-btn">전체 삭제</button>
     </div>
+    <button id="clear-btn">전체 삭제</button>
     <div class="status-area">
       <span id="count"></span>
     </div>
